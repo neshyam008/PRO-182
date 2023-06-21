@@ -60,11 +60,11 @@ export default class Main extends Component {
         <View style={styles.middleContainer}>
           <Camera
             style={{ flex: 1 }}
-            type={Camera.Constants.Type.front}
+            type={CameraType.front}
             faceDetectorSettings={{
-              mode: FaceDetector.Constants.Mode.fast,
-              detectLandmarks: FaceDetector.Constants.Landmarks.all,
-              runClassifications: FaceDetector.Constants.Classifications.all
+                mode: FaceDetector.FaceDetectorMode.fast,
+                detectLandmarks: FaceDetector.FaceDetectorLandmarks.all,
+                runClassifications: FaceDetector.FaceDetectorClassifications.all
             }}
             onFacesDetected={this.onFacesDetected}
             onFacesDetectionError={this.onFacesDetectionError}
